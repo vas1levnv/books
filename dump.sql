@@ -89,12 +89,3 @@ values (1,1),
        (4,5),
        (5,4),
        (6,3);
-
-
-
-select b.name, b.description, b.images, a.author, g.genre from books b
-                                                                   join books_and_authors baa on b.id = baa.booksId
-                                                                   join authors a on a.id = baa.authorsId
-                                                                   join books_and_genres bag on b.id = bag.booksId
-                                                                   join genres g on bag.genresId = g.id
-where name like 'Гарри%';
